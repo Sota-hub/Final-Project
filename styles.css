@@ -1,0 +1,84 @@
+.game {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  width: 600px;
+  height: 200px;
+  background-image: url(img/bg.jpg);
+  background-size:  600px 200px;
+  border-radius: 6px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#dino {
+  width: 60px;
+  height: 60px;
+  background-image: url(img/t-rex.png);
+  background-size: 60px 60px;
+  transform: scale(-1, 1);
+  position: relative;
+  top: 150px;
+}
+
+.jump {
+  animation: jump .4s linear;
+}
+
+
+@keyframes jump {
+  0% {
+    top: 150px 
+  }
+  30% {
+    top: 110px;
+  }
+  50% {
+    top: 70px;
+  }
+  80% {
+    top: 110px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+
+#meat {
+  width: 35px;
+  height: 35px;
+  background-image: url(img/meat.png);
+  background-size: 35px 35px;
+  position: relative;
+  top: 107px;
+  left: 580px;
+}
+
+.obstacle {
+  animation: obstacle 1s  infinite linear;
+}
+
+@keyframes obstacle {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -35px;
+  }
+}
+
+#over {
+  position: absolute;
+  top: 80px;
+  left: 670px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  opacity: .8;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
